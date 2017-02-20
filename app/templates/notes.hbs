@@ -1,1 +1,14 @@
+<div class="sidebar">
+  <ul>
+    <li>Test</li>
+  </ul>
+</div>
+
+<div class="content">
+  {{note-create}}
+  {{#each model as |note|}}
+    {{note-tile m=note}}
+  {{/each}}
+</div>
+
 {{outlet}}

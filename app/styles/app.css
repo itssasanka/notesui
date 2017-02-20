@@ -1,0 +1,53 @@
+#container{
+  display: block;
+  width:1000px;
+  height:1000px;
+  padding:10px;
+  border:1px solid black;
+}
+
+.sidebar {
+  position:absolute;
+  float: left;
+  width: 180px;
+  color:black;
+  background: lightgrey;
+}
+
+.content{
+  width:800px;
+  border:1px solid gray;
+  float:right;
+}
+
+.note{
+  margin:4px;
+  margin-bottom:10px;
+  padding:5px;
+  border:1px solid lightgray;
+}
+
+.note .title{
+  font:20px sans-serif;
+}
+
+.note .body{
+  font:16px sans-serif;
+}
+
+.note a.tag{
+  font-size:10px;
+  margin: 4px;
+}
+
+#note-create {
+  padding:5px;
+  margin:4px;
+  margin-bottom:10px;
+  border:1px dashed lightgray;
+}
+
+#note-create input, textarea{
+  display:block;
+  margin:3px;
+}
