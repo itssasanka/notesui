@@ -1,8 +1,11 @@
 import Ember from 'ember';
 
 export default Ember.Component.extend({
-  actions(){
-
+  create: false,
+  actions: {
+    toggleCreate(){
+      this.toggleProperty('create');
+    }
   }
 
 });

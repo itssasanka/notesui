@@ -1,11 +1,25 @@
 <div id="note-create">
 
+{{#if create}}
 
   {{input name="title" placeholder="Title"}}
-
-  {{textarea name="body" placeholder="Body" rows=5 cols=10}}
-
+  {{textarea name="body" placeholder="Body" rows="5" cols="50"}}
   {{input name="tags" placeholder="Tags" size=30}}
+  <button class="small-button" {{action ""}}>
+    Submit
+  </button>
+  <a class="button-link" {{action "toggleCreate"}}>
+  Cancel
+  </a>
+
+{{else}}
+
+  <button class="small-button" {{action "toggleCreate"}}>
+    New Note
+  </button>
+
+{{/if}}
+
 </div>
 
 {{yield}}
