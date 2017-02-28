@@ -71,7 +71,6 @@ button.small-button{
 }
 
 a.button-link{
-  margin:5px;
   font: 13px sans-serif;
   text-decoration: underline;
   color: #0086b3;
@@ -84,4 +83,8 @@ a.button-link{
 
 .button-link:active{
   color: #b2f2ec;
+}
+
+.margin-5{
+  margin:5px;
 }
