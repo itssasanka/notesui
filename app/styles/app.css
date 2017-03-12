@@ -74,6 +74,7 @@ a.button-link{
   font: 13px sans-serif;
   text-decoration: underline;
   color: #0086b3;
+  margin-right:3px;
 }
 
 .button-link:hover{

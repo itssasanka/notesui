@@ -1,13 +1,15 @@
 <div class="note">
-  <div class="title">
-    {{m.title}}
-  </div>
-  <div class="body">
-    {{m.content}}
-  </div>
-  {{#each m.tags as |tag|}}
-    <a href="#" class="button-link">{{tag}}</a>
-  {{/each}}
+	<div class="title">
+		{{m.title}}
+	</div>
+	<div class="body">
+		{{m.content}}
+	</div>
+	{{#each m.tags as |tag|}}
+		{{#link-to "notes" (query-params tag_id=tag.id) class='button-link' replace=true}}
+			{{tag.name}}
+		{{/link-to}}
+	{{/each}}
 </div>
 
 
