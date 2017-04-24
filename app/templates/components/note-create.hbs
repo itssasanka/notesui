@@ -1,24 +1,26 @@
 <div id="note-create">
 
-{{#if create}}
+    {{#if create}}
 
-  {{input name="title" placeholder="Title"}}
-  {{textarea name="body" placeholder="Body" rows="5" cols="50"}}
-  {{input name="tags" placeholder="Tags" size=30}}
-  <button class="small-button" {{action ""}}>
-    Submit
-  </button>
-  <a class="button-link margin-5" {{action "toggleCreate"}}>
-  Cancel
-  </a>
+        <form {{action "createNewNote" on="submit"}}>
+            {{input value=title name="title" placeholder="Title"}}
+            {{textarea value=body name="body" placeholder="Body" rows="5" cols="50"}}
+            {{input value=tags name="tags" placeholder="Tags" size=30}}
+            <button type="submit" class="small-button">
+                Submit
+            </button>
+            <a class="button-link margin-5" {{action "toggleCreate"}}>
+                Cancel
+            </a>
+        </form>
 
-{{else}}
+    {{else}}
 
-  <button class="small-button" {{action "toggleCreate"}}>
-    New Note
-  </button>
+        <button class="small-button" {{action "toggleCreate"}}>
+            New Note
+        </button>
 
-{{/if}}
+    {{/if}}
 
 </div>
 
