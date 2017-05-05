@@ -1,0 +1,23 @@
+<div id="tag-create">
+
+    {{#if create}}
+
+        <form {{action "createNewTag" on="submit"}}>
+            {{input value=name name="name" placeholder="Tag name"}}
+            <button type="submit" class="small-button">
+                Submit
+            </button>
+            <a class="button-link margin-5" {{action "toggleCreate"}}>
+                Cancel
+            </a>
+        </form>
+
+    {{else}}
+
+        <a class="button-link margin-5" {{action "toggleCreate"}}>Create a tag</a>
+
+    {{/if}}
+
+</div>
+
+{{yield}}

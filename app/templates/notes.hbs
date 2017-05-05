@@ -1,14 +1,15 @@
 <div class="sidebar">
-  <ul>
-    <li></li>
-  </ul>
+    {{tag-create}}
+    {{#each tags as |tag|}}
+        {{tag-link tag=tag}}
+    {{/each}}
 </div>
 
 <div class="content">
-  {{note-create}}
-  {{#each notes as |note|}}
-    {{note-tile m=note}}
-  {{/each}}
+    {{note-create}}
+    {{#each notes as |note|}}
+        {{note-tile m=note}}
+    {{/each}}
 </div>
 
 {{outlet}}

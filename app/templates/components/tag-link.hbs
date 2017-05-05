@@ -1,0 +1,6 @@
+<li>
+    {{#link-to "notes" (query-params tag_id=tag.id) class='button-link' replace=true}}
+        {{tag.name}}
+    {{/link-to}}
+</li>
+{{yield}}

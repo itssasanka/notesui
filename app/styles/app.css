@@ -7,9 +7,10 @@
 }
 
 .sidebar {
+  padding:10px;
   position:absolute;
   float: left;
-  width: 180px;
+  width: 170px;
   color:black;
   background: lightgrey;
 }
@@ -88,4 +89,15 @@ a.button-link{
 
 .margin-5{
   margin:5px;
+}
+
+.sidebar a.button-link{
+
+}
+.sidebar a.button-link:hover{
+  color: darkslategray;
+}
+
+.sidebar .small-button{
+  margin-left:0px;
 }
