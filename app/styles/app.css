@@ -59,6 +59,7 @@ button.small-button{
   font: 13px sans-serif;
   border:0;
   color:white;
+  outline-style: none;
 }
 
 .small-button:hover{
