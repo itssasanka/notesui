@@ -4,7 +4,7 @@
 
         <form {{action "createNewTag" on="submit"}}>
             {{input value=name name="name" placeholder="Tag name"}}
-            <button type="submit" class="small-button">
+            <button type="submit" class="small-button disabled">
                 Submit
             </button>
             <a class="button-link margin-5" {{action "toggleCreate"}}>

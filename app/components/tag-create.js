@@ -10,9 +10,10 @@ export default Ember.Component.extend({
         },
         createNewTag(){
             let tag = this.get('store').createRecord('tag', {
-                    name: this.get('name'),
+                name: this.get('name'),
             });
             tag.save();
-        }
+        },
+
     }
 });

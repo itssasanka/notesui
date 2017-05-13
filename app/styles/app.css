@@ -91,13 +91,19 @@ a.button-link{
   margin:5px;
 }
 
-.sidebar a.button-link{
-
-}
 .sidebar a.button-link:hover{
   color: darkslategray;
 }
 
 .sidebar .small-button{
   margin-left:0px;
+}
+
+.small-button.disabled{
+  color: lightgray;
+  background: #9b9b9b;
+}
+
+.small-button.disabled:hover{
+  cursor: default;
 }
