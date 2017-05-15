@@ -9,7 +9,14 @@ export default DS.RESTSerializer.extend({
         return this._super(store, primaryModelClass, payload, id, requestType);
     },
 
-    serializeIntoHash: function(hash, type, record, options) {
+    serializeIntoHash: function (hash, type, record, options) {
         Ember.merge(hash, this.serialize(record, options));
+    },
+    extractErrors: function (store, typeClass, payload, id) {
+        if (payload && typeof payload === 'object') {
+            payload = payload.error;
+            this.normalizeErrors(typeClass, payload);
+        }
+        return payload;
     }
 });

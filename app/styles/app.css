@@ -100,11 +100,20 @@ a.button-link{
   margin-left:0px;
 }
 
-.small-button.disabled{
+.small-button:disabled{
   color: lightgray;
   background: #9b9b9b;
 }
 
 .small-button.disabled:hover{
   cursor: default;
+}
+
+.error-block{
+  border: 1px solid #ef2f2a;
+  color: #c60000;
+  padding:3px;
+  font: 13px sans-serif;
+  background-color: #fff0e6;
+  margin-bottom: 5px;
 }

@@ -1,15 +1,11 @@
 <div id="tag-create">
 
     {{#if create}}
-
-        {{#if errors.length}}
-
-
-        {{/if}}
+        {{error-block}}
 
         <form {{action "createNewTag" on="submit"}}>
-            {{input value=name name="name" placeholder="Tag name"}}
-            <button type="submit"  class="small-button disabled">
+            {{input value=name key-up="toggleSubmit" name="name" placeholder="Tag name"}}
+            <button type="submit" disabled id="createTag" class="small-button disabled">
                 Submit
             </button>
             <a class="button-link margin-5" {{action "toggleCreate"}}>

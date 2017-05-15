@@ -20,8 +20,12 @@ export default Ember.Component.extend({
                 let tag = this.get('store').createRecord('tag', {
                     name: this.get('name'),
                 });
-                tag.save();
+                tag.save().catch((e)=>{debugger;});
+
             }
         },
+        toggleSubmit(){
+            this.$('.small-button').prop('disabled', Ember.isBlank(this.get('name')));
+        }
     }
 });
