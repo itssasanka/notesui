@@ -1,0 +1,12 @@
+{{#if errors.length}}
+    <div class="error-block">
+        <ul>
+            {{#each errors as |e|}}
+                <li>
+                    e
+                </li>
+            {{/each}}
+        </ul>
+    </div>
+{{/if}}
+{{yield}}
