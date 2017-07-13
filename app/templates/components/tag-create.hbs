@@ -1,7 +1,7 @@
 <div id="tag-create">
 
     {{#if create}}
-        {{error-block}}
+        {{error-block errors=errors}}
 
         <form {{action "createNewTag" on="submit"}}>
             {{input value=name key-up="toggleSubmit" name="name" placeholder="Tag name"}}

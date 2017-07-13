@@ -6,6 +6,9 @@ export default Ember.Component.extend({
             this.errors.pushObject({name: 'Tag name cannot be empty.'});
         }
     },
+    didUpdateAttrs(){
+      console.log("updated");
+    },
 
     store: Ember.inject.service(),
     create: false,
@@ -20,7 +23,7 @@ export default Ember.Component.extend({
                 let tag = this.get('store').createRecord('tag', {
                     name: this.get('name'),
                 });
-                tag.save().catch((e)=>{debugger;});
+                tag.save().then(()=>{}).catch((aa)=>{this.set('errors', aa.errors.map(e=>e.detail))});
 
             }
         },

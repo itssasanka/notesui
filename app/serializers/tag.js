@@ -11,12 +11,5 @@ export default DS.RESTSerializer.extend({
 
     serializeIntoHash: function (hash, type, record, options) {
         Ember.merge(hash, this.serialize(record, options));
-    },
-    extractErrors: function (store, typeClass, payload, id) {
-        if (payload && typeof payload === 'object') {
-            payload = payload.error;
-            this.normalizeErrors(typeClass, payload);
-        }
-        return payload;
     }
 });
