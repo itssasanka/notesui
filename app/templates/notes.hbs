@@ -1,5 +1,5 @@
 <div class="sidebar">
-    {{tag-create}}
+    {{tag-create changeset=(changeset model TagValidations)}}
     {{#each tags as |tag|}}
         {{tag-link tag=tag}}
     {{/each}}

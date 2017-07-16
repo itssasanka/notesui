@@ -4,7 +4,7 @@ import {
 } from 'ember-changeset-validations/validators';
 
 export default {
-  tag: [
+  name: [
     validatePresence(true),
     validateLength({min: 2})
   ]

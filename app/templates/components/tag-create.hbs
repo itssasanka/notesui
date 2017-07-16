@@ -5,7 +5,7 @@
         {{error-block errors=tag.errors.name}}
 
         <form {{action "createNewTag" on="submit"}}>
-            {{input value=name key-up="toggleSubmit" name="name" placeholder="Tag name"}}
+            {{input value=changeset.name key-up="toggleSubmit" name="name" placeholder="Tag name"}}
             <button type="submit" disabled id="createTag" class="small-button disabled">
                 Submit
             </button>
